@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import { UserPreferences, WeekPlan as WeekPlanType } from './types';
 import { generateWeekPlan } from './generatePlan';
 import { generatePlanFromAI } from './generatePlanFromAI';
@@ -43,6 +44,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-[#FAFAFA]">
+      <Analytics />
       {/* ── Navbar ── */}
       <nav className="fixed top-0 inset-x-0 z-30 bg-white/80 backdrop-blur-xl border-b border-gray-100">
         <div className="max-w-5xl mx-auto px-6 h-14 flex items-center justify-between">
